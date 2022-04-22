@@ -35,6 +35,8 @@ export class Storage extends AwsConstruct {
     constructor(scope: CdkConstruct, id: string, configuration: Configuration, private provider: AwsProvider) {
         super(scope, id);
 
+        console.log("hello world");
+
         const resolvedConfiguration = Object.assign({}, STORAGE_DEFAULTS, configuration);
 
         const encryptionOptions = {
